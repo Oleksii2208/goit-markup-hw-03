@@ -7,13 +7,44 @@ body {
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
 /* -------------------heder----------------- */
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
 
 .logo {
   font-family: "Raleway", sans-serif;
@@ -24,14 +55,26 @@ a {
   text-transform: uppercase;
   color: #4d5ae5;
 }
+.header-logo {
+  padding: 24px 0;
+  margin-right: 76px;
+}
 .header-logo .logo-part {
   color: #2e2f42;
 }
 .footer-logo .logo-part {
   color: #f4f4fd;
 }
-
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.nav-item {
+}
 .nav-link {
+  padding: 24px 0;
+  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -41,9 +84,18 @@ a {
 
 .address {
   font-style: normal;
+  margin-left: auto;
 }
-
+.address-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.address-item {
+}
 .address-link {
+  display: block;
+  padding: 24px 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -62,15 +114,27 @@ a {
 .hero {
   background-color: #2e2f42;
 }
+.hero-container {
+  display: block;
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
 .hero-title {
-  font-weight: 700;
+  max-width: 496px;
+  margin: 0 auto;
+  margin-bottom: 48px;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
 }
+
 .hero-btn {
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 16px 32px;
   background-color: #4d5ae5;
   font-weight: 500;
   font-size: 16px;
@@ -86,15 +150,38 @@ a {
 }
 
 /*-----------------features-------------- */
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.features {
+}
 .features-title {
+  padding-top: 120px;
+  padding-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
+.features-list {
+  display: flex;
+  gap: 24px;
+  width: calc((100% - 3 * 24) / 4);
+}
+.features-item {
+}
 .features-text {
+  padding-bottom: 120px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -107,6 +194,10 @@ a {
   background-color: #f4f4fd;
 }
 .team-title {
+  max-width: 163px;
+  margin: 0 auto;
+  padding-top: 72px;
+  padding-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -115,12 +206,22 @@ a {
   color: #2e2f42;
   text-transform: capitalize;
 }
+.team-list {
+  display: flex;
+  gap: 24px;
+  width: calc((100% - 24 * 3) / 4);
+  padding-bottom: 120px;
+}
 .team-item {
   background-color: #fff;
+  border-radius: 0 0 4px 4px;
 }
 .team-item-image {
+  max-width: 100%;
+  height: auto;
 }
 .team-subtitle {
+  padding-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -136,14 +237,9 @@ a {
   color: #434455;
 }
 
-.team-list {
-}
-
-.team-item-image {
-}
-.team-subtitle {
-}
-.team-text {
+.team-container {
+  display: block;
+  padding: 32px 16px;
 }
 
 /* -----------------portfolio------------- */
@@ -151,6 +247,10 @@ a {
 .portfolio {
 }
 .portfolio-title {
+  max-width: 219px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -160,12 +260,22 @@ a {
   text-transform: capitalize;
 }
 .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+  width: calc((100% - 24 * 3) / 3);
+  padding-bottom: 120px;
 }
 .portfolio-item {
+  margin: 0 auto;
 }
 .portfolio-list-image {
+  max-width: 100%;
+  height: auto;
 }
 .portfolio-subtitle {
+  padding-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -179,18 +289,27 @@ a {
   color: #434455;
 }
 
+.portfolio-container {
+  display: block;
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+}
 /* -----------------footer---------------- */
 
 .footer {
   background-color: #2e2f42;
+  padding: 100px 100px;
 }
 .logo {
 }
 .footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 .logo-part {
 }
 .footer-text {
+  max-width: 264px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
